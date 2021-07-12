@@ -11,7 +11,7 @@ describe "#chess_knight_path" do
   end
 
   context "finding shortest path" do
-    [[%w[b3 g5], 3], [%w[b7 d2], 3], [%w[g1 d7], 3], [%w[e6 d5], 2], [%w[a2 h8], 5]].each do |solutions_array|
+    [[%w[b3 g5], 3], [%w[b7 d2], 3], [%w[g1 d7], 3], [%w[e6 d5], 2], [%w[a2 h8], 5], [%w[h2 g4], 1]].each do |solutions_array|
       it "shortpath should be #{solutions_array[1]} when squares are #{solutions_array[0][0]} and #{solutions_array[0][1]}" do
         expect(knight(solutions_array[0][0], solutions_array[0][1])).to eq(solutions_array[1])
       end
